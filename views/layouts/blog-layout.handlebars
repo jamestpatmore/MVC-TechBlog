@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="https://image.ibb.co/fOur3b/favicon.png"/>
+    <link rel="stylesheet" href="/css/blog.css">
+    <link rel="stylesheet" href="/css/contact.css">
+    <link rel="stylesheet" href="/css/login.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <meta name="theme-color" content="#1885ed">
+    <title>Homepage</title>
+    </head>
+    
+    <body>
+    <header class="header">
+    <div class="container header__container">
+    <div class="header__logo"><img class="header__img" src="/images/devteklogo.jpeg" width="40" height="30"> <h1 class="header__title">Dev<span class="header__light">Tek</span></h1></div> 
+    
+    
+    <div class="navbar-menu" id="navbarMenuHeroC">
+    <!--
+    need to enable the burger menu for mobile responsivness
+    -->
+
+        <a 
+        role="button" 
+        class="navbar-burger" 
+        data-target="navbarMenuHeroC"
+        aria-label="menu"
+        aria-expanded="false"
+        >
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+        <nav id="navbar" class="header__nav collapse">
+        <ul class="header__elenco">
+            <li class="header__el"><a href="/homepage" class="header__link">Home</a></li>
+            <li class="header__el"><a href="/blog" class="header__link">Blog</a></li>
+            <li class="header__el"><a href="/contact" class="header__link">Contact us</a></li>
+            <li class="header__el"><a href="/user/profile" class="header__link">Profile</a></li>
+            <li class="header__el header__el--blue"><a href="/login" id="logout" class="btn btn--white">Log Out→</a></li>
+           
+        </ul>
+        </nav>
+    </div>
+        </div>
+    </header>
+    <main>
+            <div class="grid">
+                <div class="grid-item details upload resize">
+                    <div>
+                        <a href='#'><img class="upload__button" src="/images/favicon-32x32.png"></a>
+                        <p class="card__category">Upload</p>
+                        <h2 id="goad" class="card__heading">How do you stack up?</h2>
+                    </div>
+                </div>
+                <main>
+
+                {{{body}}}
+                </main>
+            </div>
+    </main>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script>
+    <script src="/js/blog.js"></script>
+    <script src="/js/logout.js"></script>
+</body>
+</html>

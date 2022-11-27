@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="https://image.ibb.co/fOur3b/favicon.png"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/public/css/login.css">
+    <link rel="stylesheet" href="/public/css/main.css">
+    <link rel="stylesheet" href="/public/css/profile.css">
+    <meta name="theme-color" content="#1885ed">
+    <title>Profile</title>
+    </head>
+    
+    <body>
+    <header class="header">
+    <div class="container header__container">
+    <div class="header__logo"><img class="header__img" src="/public/images/devteklogo.jpeg" width="40" height="30"> <h1 class="header__title">Dev<span class="header__light">Tek</span></h1></div> 
+    
+    
+    <div class="navbar-menu" id="navbarMenuHeroC">
+    <!--
+    need to enable the burger menu for mobile responsivness
+    -->
+
+        <a 
+        role="button" 
+        class="navbar-burger" 
+        data-target="navbarMenuHeroC"
+        aria-label="menu"
+        aria-expanded="false"
+        >
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+        <nav id="navbar" class="header__nav collapse">
+        <ul class="header__elenco">
+            <li class="header__el"><a href="/homepage" class="header__link">Home</a></li>
+            <li class="header__el"><a href="/blog" class="header__link">Blog</a></li>
+            <li class="header__el"><a href="/profile" class="header__link">Profile</a></li>
+            <li class="header__el"><a href="/contact" class="header__link">Contact us</a></li>
+            <li class="header__el header__el--blue"><a href="/login" id="logout" class="btn btn--white">Log Out→</a></li>
+           
+        </ul>
+        </nav>
+    </div>
+        </div>
+    </header>
+    
+       <!-- Main -->
+  <main id="main" class="flexbox-col-start-center">
+
+    
+
+    <!-- Profile Page -->
+    <div class="view-width">
+  
+      <!-- Profile Header -->
+      <section class="profile-header">
+        <div class="profile-header-inner flexbox">
+          <div class="phi-info-wrapper flexbox">
+            <div class="phi-info-left flexbox">
+              <!-- Profile Picture -->
+              <div class="phi-profile-picture-wrapper">
+                <div class="phi-profile-picture-inner flexbox">
+                  <img class="phi-profile-picture" src="https://i0.wp.com/animegalaxyofficial.com/wp-content/uploads/2022/07/20220730_191614-min-edited.jpg?resize=750%2C423&ssl=1" alt="">
+                </div>
+                <img class="phi-profile-picture-blur" src="https://i0.wp.com/animegalaxyofficial.com/wp-content/uploads/2022/07/20220730_191614-min-edited.jpg?resize=750%2C423&ssl=1" alt="">
+              </div>
+              <!-- Profile Username -->
+              <div class="phi-profile-username-wrapper flexbox-col-left">
+                <h3 class="phi-profile-username flexbox">Username</h3>
+                <p class="phi-profile-tagline">Something neat and funny!</p>
+              </div>
+            </div>
+            <div class="phi-info-right flexbox-right">
+              <div>
+                <button type="button" class="btn-primary-gray button btn-primary flexbox" href="/public/ref/blogcreate.html">
+                    <i class="fa-solid fa-plus"></i> BLOG <div class="btn-secondary"></div>
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Profile Header Image -->
+          <div class="profile-header-overlay"></div>
+          <img class="profile-header-image" src="/public/images/devteklogo.jpeg" alt="">
+        </div>
+      </section>
+  
+      <!-- Profile Page -->
+      <section class="profile-page">
+        <h3>Blog Posts</h3>
+        <div class="profile-page-inner">
+          <div class="profile-page-item flexbox">
+            <img class="profile-page-item-image" src="https://images.squarespace-cdn.com/content/v1/5f7e4be212ca783dc7437faf/1607555603362-3VBXWK49RJYQSCRU76MA/sqboi_sq.jpg?format=500w" alt="">
+          </div>
+        </div>
+      </section>
+  
+    </div>
+    
+  </main>
+   
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script>
+    <script src="/js/blog.js"></script>
+    <script src="/js/logout.js"></script>
+
+    <script src="/utils/index.js"></script>
+</body>
+</html>

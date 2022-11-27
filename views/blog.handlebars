@@ -1,0 +1,23 @@
+
+ <div class="grid">
+    <div class="grid-item details upload resize">
+         <div>
+            <a href='/blogcreate'><img class="upload__button" src="/images/favicon-32x32.png"></a>
+            <p class="card__category">Upload</p>
+            <h2 id="goad" class="card__heading">How do you stack up?</h2>
+         </div>
+    </div>
+    {{#each blogs}}
+    <a class="grid-item details" href="/blog/{{id}}">
+        <img class="resize" src="{{picture}}" alt="" href="/blog/{{user.blog.id}}">
+        <div class="blog-info">
+            <div class="polls">
+                <button class="upvote" id="up"></button>
+                <p class="vote__count" id="poll">{{rating}}</p>
+                <button class="downvote" id="down"></button> 
+            </div>
+            <h2>{{title}}</h2>
+            <p class="username">{{user.username}}</p>
+        </div>
+    </a>
+    {{/each}}

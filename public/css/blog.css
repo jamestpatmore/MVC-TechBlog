@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Antonio&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
+
+:root {
+  --discreetbg: rgba(41, 41, 41, 0.5)
+}
+
+.grid {
+  margin: auto;
+  justify-content: center;
+  align-content: center;
+}
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.resize {
+  width: 290px;
+  height: auto; 
+  float: left;
+  border-radius: var(--spacing-l);
+  padding: 5px; 
+}
+.details {
+  position: absolute;
+  z-index: 1;
+  width: auto;
+  height: auto;
+  top: 0;
+  background-color: black;
+  border-radius: var(--spacing-l);
+  box-sizing: border-box;
+}
+h2 {
+  margin-top: 3px;
+  text-align: left;
+  color: var(--text-lighter) !important;
+}
+ul {
+  list-style-type: none;
+}
+.username {
+  color: var(--text-light) !important;
+}
+.blog-info {
+  position: absolute;
+  bottom: 4px;
+  z-index: 4;
+  width: 100%;
+  background-color: var(--discreetbg);
+  width: 280px;
+  padding: 12px;
+  padding-top: 0px;
+  border-radius: 0px 0px 15px 15px;
+  opacity: 0;
+  right: 5px;
+}
+.grid-item:hover .resize {
+  transform: scale(1.05) translateZ(0);
+  transition-property: transform;
+  transition-duration: .3s;
+  z-index: 7;
+}
+.grid-item:hover .blog-info {
+  opacity: 1;
+  transition-property: opacity;
+  transition-duration: .6s;
+}
+.grid-item {
+  z-index: 0;
+  margin-bottom: 10px;
+}
+.upload {
+  background-color: var(--discreetbg);
+  width: 290px;
+  height: 290px;
+}
+.upload__button {
+  transform: translate(-50%, -50%) rotate(45deg);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+.upload__button:hover {
+  transform: translate(-50%, -50%) rotate(45deg) scale(1.5) translateZ(0);
+  transition-property: transform;
+  transition-duration: .3s;
+}
+.downvote {
+  background-color: rgba(41, 41, 41, 0);
+  width: 0px;
+  height: 0px;
+  border: 10px solid black;
+  border-top-color: var(--text-lighter);
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  z-index: 5;
+  border-radius: 5px;
+}
+.upvote {
+  background-color: rgba(41, 41, 41, 0);
+  width: 0px;
+  height: 0px;
+  border: 10px solid black;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: var(--text-lighter);
+  border-left-color: transparent;
+  z-index: 5;
+  border-radius: 5px;
+}
+.polls {
+  position: absolute;
+  left: 255px;
+  bottom: 2px;
+  text-align: center;
+  text-justify: center;
+}
+.vote__count {
+  color: var(--text-lighter)
+}
+.hide {
+  display: none;
+}
+.center {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;   
+}
+.upvote-active{
+  border-bottom-color: green;
+}
+.downvote-active {
+  border-top-color: red;
+}
+/* TODO: add upvote and down vote on click color changes*/

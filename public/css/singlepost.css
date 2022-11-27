@@ -1,0 +1,144 @@
+body{
+    background: #000000;
+  }
+  
+  .fb-card{
+    background: #fff;
+    width: 100%;
+    max-width: 560px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    margin-top: 30px;
+  }
+
+  span {
+    color: black;
+  }
+
+  .fb-card-text {
+    color: red;
+    font-style: italic;
+    font-weight: 600;
+  }
+  
+  .fb-card a{
+    text-decoration: none;
+  }
+  
+  .fb-card-content{
+    padding: 10px;
+  }
+  
+  .fb-card-header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .fb-card-user-image{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .fb-card-user-name{
+    display: block;
+    color: #2E4F8D;
+  }
+  
+  .options-icon{
+    margin-left: auto;
+    align-self: flex-start;
+    color: #2E4F8D;
+  }
+  
+  .fb-card-image{
+    width: 100%;
+  }
+  
+  .fb-card-actions{
+    position: relative;
+  }
+  
+  .fb-card-item{
+    margin-right: 10px;
+    color: gray;
+    margin-top: 8px;
+    display: inline-block;
+  }
+  
+  .fb-card-comments{
+    background: #f2f2f2;
+    padding: 10px;
+    border-top: 1px solid #ccc;
+  }
+  
+  .fb-card-reaction{
+    font-size: 6px;
+    display: inline-block;
+    color: rgb(255, 255, 255);
+    background: red;
+    border-radius: 50%;
+    padding: 5px;
+    border: 2px solid #f2f2f2;
+    margin-left: -10px;
+  }
+  
+  .fb-card-input{
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-bottom: 20px;
+  }
+  
+  .fb-card-input-image{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: block;
+    margin-left: 10px;
+  }
+  
+  .fb-card-input-input{
+    width: 100%;
+    padding: 10px;
+    border-radius: 100px;
+    border: 1px solid #ccc;
+  }
+  
+  .input-icons{
+    position: absolute;
+    right: 10px;
+  }
+  
+  .fb-card-comment{
+    display: flex;
+    margin-bottom: 15px;
+  }
+  .fb-card-comment-text{
+    position: relative;
+    background: rgb(255, 254, 254);
+    border-radius: 20px;
+    padding: 5px;
+    color:#000000;
+  }
+  
+  .reaction{
+    position: absolute;
+    display: block;
+    top: 16px;
+    right: -7px;
+    background: #fff;
+    box-shadow: 2px 2px rgba(0,0,0,0.2);
+    border-radius: 20px;
+    padding: 5px;
+  }
+  
+  .btn:hover {
+    cursor: pointer;
+  }
+
+  .btn {
+    border-radius: 20px;
+  }

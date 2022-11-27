@@ -1,0 +1,54 @@
+<main id="main" class="flexbox-col-start-center">
+
+    
+
+    <!-- Profile Page -->
+    <div class="view-width">
+  
+      <!-- Profile Header -->
+      <section class="profile-header">
+        <div class="profile-header-inner flexbox">
+          <div class="phi-info-wrapper flexbox">
+            <div class="phi-info-left flexbox">
+              <!-- Profile Picture -->
+              <div class="phi-profile-picture-wrapper">
+                <div class="phi-profile-picture-inner flexbox">
+                  <img class="phi-profile-picture" src="https://i0.wp.com/animegalaxyofficial.com/wp-content/uploads/2022/07/20220730_191614-min-edited.jpg?resize=750%2C423&ssl=1" alt="">
+                </div>
+                <img class="phi-profile-picture-blur" src="https://i0.wp.com/animegalaxyofficial.com/wp-content/uploads/2022/07/20220730_191614-min-edited.jpg?resize=750%2C423&ssl=1" alt="">
+              </div>
+              <!-- Profile Username -->
+              <div class="phi-profile-username-wrapper flexbox-col-left">
+                <h3 class="phi-profile-username flexbox">{{user.username}}</h3>
+                <p class="phi-profile-tagline">Something neat and funny!</p>
+              </div>
+            </div>
+            <div class="phi-info-right flexbox-right">
+              <div href="/blogcreate">
+                <button type="button" class="btn-primary-gray button btn-primary flexbox" href="/blogcreate">
+                    <i class="fa-solid fa-plus"></i> BLOG <div class="btn-secondary"></div>
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Profile Header Image -->
+          <div class="profile-header-overlay"></div>
+          <img class="profile-header-image" src="/images/devteklogo.jpeg" alt="">
+        </div>
+      </section>
+  
+      <!-- Profile Page -->
+      <section class="profile-page">
+        <h3>Blog Posts</h3>
+        <div class="profile-page-inner">
+            {{#each user.blogs as |blog|}}
+          <div class="profile-page-item flexbox">
+            <img class="profile-page-item-image" src="{{blog.picture}}" alt="" href="/blog/{{user.blog.id}}">
+          </div>
+          {{/each}}
+        </div>
+      </section>
+  
+    </div>
+    
+  </main>

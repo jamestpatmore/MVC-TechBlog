@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="https://image.ibb.co/fOur3b/favicon.png"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap-grid.min.css" integrity="sha512-JQksK36WdRekVrvdxNyV3B0Q1huqbTkIQNbz1dlcFVgNynEMRl0F8OSqOGdVppLUDIvsOejhr/W5L3G/b3J+8w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/public/css/main.css">
+    <link rel="stylesheet" href="/public/css/singlepost.css">
+    <meta name="theme-color" content="#1885ed">
+    <title>Homepage</title>
+    </head>
+    
+    <body>
+    <header class="header">
+    <div class="container header__container">
+    <div class="header__logo"><img class="header__img" src="/images/devteklogo.jpeg" width="40" height="30"> <h1 class="header__title">Dev<span class="header__light">Tek</span></h1></div> 
+    
+    
+    <div class="navbar-menu" id="navbarMenuHeroC">
+    <!--
+    need to enable the burger menu for mobile responsivness
+    -->
+
+        <a 
+        role="button" 
+        class="navbar-burger" 
+        data-target="navbarMenuHeroC"
+        aria-label="menu"
+        aria-expanded="false"
+        >
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+        <nav id="navbar" class="header__nav collapse">
+        <ul class="header__elenco">
+            <li class="header__el"><a href="/homepage" class="header__link">Home</a></li>
+            <li class="header__el"><a href="/blog" class="header__link">Blog</a></li>
+            <li class="header__el"><a href="/contact" class="header__link">Contact us</a></li>
+            <li class="header__el"><a href="/user/profile" class="header__link">Profile</a></li>
+            <li class="header__el header__el--blue"><a href="/login" id="logout" class="btn btn--white">Log Out→</a></li>
+           
+        </ul>
+        </nav>
+    </div>
+        </div>
+    </header>
+    <body>
+        <div class="fb-card">
+          <div class="fb-card-content">
+            
+            <div class="fb-card-header">
+              <img class="fb-card-user-image" src="https://www.blendernation.com/wp-content/uploads/2021/07/Spider_4.jpg" />
+              <div>
+                <a class="fb-card-user-name" href="#">My Post</a>
+                <span>Yesterday at 5:01 am</span>
+              </div>
+              <a class="options-icon" href="#">
+                <i class="fa fa-ellipsis-h"></i>
+              </a>
+            </div>
+            <div class="fb-card-text">
+              <p>So much beauty in one picture.</p>
+            </div>
+            <img class="fb-card-image" src="https://cdn.autonomous.ai/static/upload/images/new_post/inspiration-and-tips-for-your-ultimate-desk-gaming-pc-setup-645.jpg" />
+          </div>
+          <div class="fb-card-comments">
+            <a href="#">
+              <i class="fa-solid fa-square-poll-vertical"></i>       
+              866
+            </a>
+            <hr />
+            <div class="fb-card-input">
+              <img class="fb-card-input-image" src="https://www.blendernation.com/wp-content/uploads/2021/07/Spider_4.jpg">
+              <input class="fb-card-input-input" type="text" placeholder="Write a comment..." name="comment-body">
+              <div class="input-icons">
+                <button class="btn">
+                  submit
+                </button>         
+              </div>
+            </div>
+            <div class="fb-card-comment">
+              <img class="fb-card-input-image" src="https://preview.redd.it/ta449f0iivh91.jpg?auto=webp&s=dcb97ecbd096e11dbd1ce037dbf77158a01621eb">
+              <div class="fb-card-comment-content"> 
+                <div class="fb-card-comment-text">
+                  <a href="#">Yumi</a> Lorem ipsum dolor sit amet</a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </body>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script>
+    <script src="/js/blog.js"></script>
+    <script src="/js/logout.js"></script>
+
+    <script src="/utils/index.js"></script>
+</body>
+</html>

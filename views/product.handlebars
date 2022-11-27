@@ -1,0 +1,45 @@
+
+<section class="product-slider">
+    <img src="https://hackaday.com/wp-content/uploads/2016/06/xss_main.jpg" class="logo" />
+    <div class="card">
+        <div class="panel-1"></div>
+        <div class="panel-2"></div>
+        <div class="product">
+        <div class="product-image">
+            <img src="{{image}}" alt="product"/>
+        </div>
+            <div class="product-details">
+            <div>
+                <h1 class="product-name">{{name}}</h1>
+                <h1 class="price">
+                $<span class="product-price">{{price}}</span>.<sup>99</sup>
+                </h1>
+                <div class="specs">
+                <div class="progress-bar">
+                    <div class="progress-circle">
+                    <div class="progress-content">
+                        <h2 class="progText">{{rating}}</h2>
+                        <small><b>Rating</b></small>
+                    </div>
+                    <div class="progress"></div>
+                    </div>
+                </div>
+                <p>
+                    {{description}}
+                </p>
+                </div>
+            </div>
+            <div class="buttons">
+                <button type="button" class="btn-primary">
+                <i class="fas fa-heart"></i>
+                </br>
+                Add To Wishlist
+                </button>
+            </div>
+            </div>
+        </div>
+        </div>
+        
+    </div>
+    </section>
+
