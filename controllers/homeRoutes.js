@@ -52,7 +52,51 @@ router.get('/blogcreate', (req, res) => res.render('blogcreate', {
   layout: 'newblog'
 }));
 
+router.get('/community', (req, res) => res.render('community', {
+  logged_in: req.session.logged_in,
+  layout: 'commune'
+}));
 
+router.get('/pc', (req, res) => res.render('pc', {
+  logged_in: req.session.logged_in,
+  layout: 'category'
+}));
+
+router.get('/keyboard', (req, res) => res.render('keyboard', {
+  logged_in: req.session.logged_in,
+  layout: 'category'
+}));
+
+router.get('/chairs', (req, res) => res.render('chairs', {
+  logged_in: req.session.logged_in,
+  layout: 'category'
+}));
+
+router.get('/accesories', (req, res) => res.render('accesories', {
+  logged_in: req.session.logged_in,
+  layout: 'category'
+}));
+
+router.get('/product/:id', async (req, res) => {
+  try {
+    const productData = await Product.findOne({
+      where: {
+        id: req.params.id,
+      }
+    });
+    console.log(productData);
+    const product = productData.get({ plain: true });
+
+    res.render('product', {
+      ...product,
+      //spreading the contents of product based off of the id from the seeded data etc...
+      logged_in: req.session.logged_in,
+      layout: 'secondary'
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+})
 
 router.get('/blog/:id', async (req, res) => {
   try {
