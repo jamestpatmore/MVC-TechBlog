@@ -43,7 +43,7 @@
         <div class="profile-page-inner">
             {{#each user.blogs as |blog|}}
           <div class="profile-page-item flexbox">
-            <img class="profile-page-item-image" src="{{blog.picture}}" alt="" href="/blog/{{user.blog.id}}">
+           <a href="/user/profile/blog/{{blog.id}}" class="profile-page-item-image"><img class="profile-page-item-image" src="{{blog.picture}}" alt=""></a>
           </div>
           {{/each}}
         </div>

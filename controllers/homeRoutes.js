@@ -27,7 +27,7 @@ router.get('/login', (req, res) => {
   // If a session exists, redirect the request to the homepage
   
   if (req.session.logged_in) {
-    res.redirect('/');
+    res.redirect('/blog');
     return;
   }
 
@@ -35,13 +35,6 @@ router.get('/login', (req, res) => {
     layout: 'login'
   });
 });
-
-router.get('/test', (req, res) => res.render('test'))
-
-
-router.get('/blogcheck', (req, res) => res.render('blogcheck', {
-  layout: 'login'
-}));
 
 
 router.get('/signup', (req, res) => res.render('signup', {
@@ -52,58 +45,14 @@ router.get('/homepage', (req, res) => res.render('homepage'));
 
 router.get('/contact', (req, res) => res.render('contact'));
 
-router.get('/shop', (req, res) => res.render('shop'));
+
 
 router.get('/blogcreate', (req, res) => res.render('blogcreate', {
   logged_in: req.session.logged_in,
   layout: 'newblog'
 }));
 
-router.get('/community', (req, res) => res.render('community', {
-  logged_in: req.session.logged_in,
-  layout: 'commune'
-}));
 
-router.get('/pc', (req, res) => res.render('pc', {
-  logged_in: req.session.logged_in,
-  layout: 'category'
-}));
-
-router.get('/keyboard', (req, res) => res.render('keyboard', {
-  logged_in: req.session.logged_in,
-  layout: 'category'
-}));
-
-router.get('/chairs', (req, res) => res.render('chairs', {
-  logged_in: req.session.logged_in,
-  layout: 'category'
-}));
-
-router.get('/accesories', (req, res) => res.render('accesories', {
-  logged_in: req.session.logged_in,
-  layout: 'category'
-}));
-
-router.get('/product/:id', async (req, res) => {
-  try {
-    const productData = await Product.findOne({
-      where: {
-        id: req.params.id,
-      }
-    });
-    console.log(productData);
-    const product = productData.get({ plain: true });
-
-    res.render('product', {
-      ...product,
-      //spreading the contents of product based off of the id from the seeded data etc...
-      logged_in: req.session.logged_in,
-      layout: 'secondary'
-    });
-  } catch (err) {
-    res.status(500).json(err);
-  }
-})
 
 router.get('/blog/:id', async (req, res) => {
   try {
