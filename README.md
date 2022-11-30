@@ -12,7 +12,9 @@
 DevTek an ECOMM MVC application (utilizing handlebars.js) with social media/blog adaption for the ultimate developer community. Account creation and storage is also a huge factor to get this savvy app running properly. Sleek design and a modern approach to the ever-growing tech empire. :robot:
 
 ## Usage 
-Instructions will be shown below for npm installation methods
+Instructions will be shown below for npm installation methods...but if you want to visit the heroku deployed link you may go [here](https://limitless-waters-60912.herokuapp.com/login) 
+
+If you dont have an account you will have to make one !!!
 
 ## User Story 
 ```md 
