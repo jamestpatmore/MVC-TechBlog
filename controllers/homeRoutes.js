@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const path = require('path');
-const { User, Blog } = require('../models');
+const { User, Blog, Comment } = require('../models');
 const withAuth = require('../utils/auth');
 
 // Prevent non logged in users from viewing the homepage
@@ -111,10 +111,20 @@ router.get('/blog/:id', async (req, res) => {
       where: {
         id: req.params.id,
       },
-      include: {
+      include: [
+        {
         model: User,
         attributes: ['username']
-      }
+        },
+        {
+          model: Comment,
+          attributes: ['id', 'comment_text', 'blog_id', 'user_id'],
+          include: {
+            model: User,
+            attributes: ['username']
+          }
+        }
+      ]
     });
     console.log(blogData);
     const blog = blogData.get({ plain: true });
@@ -132,6 +142,12 @@ router.get('/blog/:id', async (req, res) => {
 router.get('/blog', async (req, res) => {
   try {
     const blogData = await Blog.findAll({
+      attributes: [
+        'id',
+        'title',
+        'rating',
+        'picture'
+      ],
       include: [
         {
           model: User,

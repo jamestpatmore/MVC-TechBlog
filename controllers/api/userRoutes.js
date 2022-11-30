@@ -46,12 +46,12 @@ router.post('/signup', async (req, res) => {
             req.session.username = userData.username;
             req.session.logged_in = true;
 
-            req.json(userData);
+            res.json(userData);
         })
     }catch(err) {
         res.status(500).json(err)
     }
-})
+});
 
 router.post('/logout', (req, res) => {
     if (req.session.logged_in) {
@@ -61,7 +61,7 @@ router.post('/logout', (req, res) => {
     } else {
         res.status(404).end();
     }
-})
+});
 
 //home shop comm blog contact signup
 

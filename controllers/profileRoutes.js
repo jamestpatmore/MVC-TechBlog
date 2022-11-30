@@ -11,7 +11,10 @@ router.get('/profile', async (req, res) => {
         attributes: [
             'id', 'username'
         ],
-        include: Blog
+        include: {
+            model: Blog,
+            attributes: ['id', 'picture', 'rating', 'title']
+        }
     });
     console.log(userData)
 

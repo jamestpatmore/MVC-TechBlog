@@ -2,7 +2,7 @@
     <div class="fb-card-content">
 
     <div class="fb-card-header">
-        <img class="fb-card-user-image" src="https://www.blendernation.com/wp-content/uploads/2021/07/Spider_4.jpg" />
+        <img class="fb-card-user-image" src="https://www.iconpacks.net/icons/2/free-user-icon-3296-thumb.png" />
         <div>
         <a class="fb-card-user-name" href="#">{{user.username}}</a>
         <span>Yesterday at 5:01 am</span>
@@ -22,23 +22,25 @@
             {{rating}}
         </a>
         <hr />
-        <div class="fb-card-input">
-            <img class="fb-card-input-image" src="https://www.blendernation.com/wp-content/uploads/2021/07/Spider_4.jpg">
-            <input class="fb-card-input-input" type="text" placeholder="Write a comment..." name="comment-body">
+        <form class="fb-card-input comment-form">
+            <img class="fb-card-input-image" src="https://www.iconpacks.net/icons/2/free-user-icon-3296-thumb.png">
+            <input class="fb-card-input-input" id="comment-body" type="text" placeholder="Write a comment..." name="comment-body">
             <div class="input-icons">
-            <button class="btn">
+            <button class="btn" id="submit" type="submit">
                 submit
             </button>         
             </div>
-        </div>
+        </form>
+        {{#each comments as |comment|}}
         <div class="fb-card-comment">
-            <img class="fb-card-input-image" src="https://preview.redd.it/ta449f0iivh91.jpg?auto=webp&s=dcb97ecbd096e11dbd1ce037dbf77158a01621eb">
+            <img class="fb-card-input-image" src="https://www.iconpacks.net/icons/2/free-user-icon-3296-thumb.png">
             <div class="fb-card-comment-content"> 
                 <div class="fb-card-comment-text">
-                    <a href="#">Yumi</a> Lorem ipsum dolor sit amet</a>
+                    <a href="#">{{user.username}}</a> {{comment_text}}</a>
 
                 </div>
             </div>
         </div>
+        {{/each}}
     </div>
 </div>

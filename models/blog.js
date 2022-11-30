@@ -19,12 +19,12 @@ Blog.init(
             allowNull: false
         },
         picture: {
-            type: DataTypes.STRING(1000),
+            type: DataTypes.STRING,
             allowNull: false,
         },
         rating: {
             type: DataTypes.INTEGER,
-            allowNull: false,
+            allowNull: true,
         },
         user_id: {
             type: DataTypes.INTEGER,
